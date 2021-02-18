@@ -11,12 +11,9 @@ pipeline {
                 echo "generate a build system"
                 cmake -S game/ -B build/
                 echo "build the app"
-                cmake --build build/
-                echo 'make'
-                make build/
-                
+                cmake --build build/              
                 echo "archiving"
-                archiveArtifacts artifacts: 'bin/*'
+                //archiveArtifacts artifacts: 'bin/*'
                 '''
             }
         }
