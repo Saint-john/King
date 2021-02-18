@@ -12,6 +12,11 @@ pipeline {
                 cmake -S game/ -B build/
                 echo "build the app"
                 cmake --build build/
+                echo 'make'
+                make build/
+                
+                echo "archiving"
+                archiveArtifacts artifacts: 'build/*'
                 '''
             }
         }
