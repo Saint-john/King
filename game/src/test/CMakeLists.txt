@@ -6,15 +6,15 @@ include_directories(
   )
  
   add_library( 
-  game
-  src/common/Game.cpp
-  src/common/GameObject.cpp)
+  test
+  ../common/Game.cpp
+  ../common/GameObject.cpp)
    
   
   set(TEST_FILES
-  src/test/test_GameObject.cpp
+  test_GameObject.cpp
   )
   
-
+enable_testing()
 add_executable(tests ${TEST_FILES})
-target_link_libraries(tests game)
+target_link_libraries(tests test)
