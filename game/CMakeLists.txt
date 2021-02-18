@@ -22,5 +22,5 @@ src/main.cpp)
 
 target_link_libraries(helloworld game)
 
-add_executable(tests ${TEST_FILES})
-target_link_libraries(tests game)
+//add_executable(tests ${TEST_FILES})
+//target_link_libraries(tests game)
