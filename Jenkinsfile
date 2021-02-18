@@ -19,7 +19,11 @@ pipeline {
         }
         stage('Test') {
             steps {
-               echo 'test....' 
+              echo "Creating a test folder"
+                mkdir -p test
+                echo "test the game"
+                ctest build/              
+                echo "archiving"
             }
         }
         stage('Deploy') {
