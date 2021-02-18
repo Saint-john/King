@@ -1,8 +1,6 @@
 pipeline {
     agent any
-    triggers{
-    gitlab(triggerOnPush:true,brancheFilterType:'All')
-    }
+    
     stages {
      
         stage('Build') {
