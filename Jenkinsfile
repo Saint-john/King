@@ -13,7 +13,7 @@ pipeline {
                 echo "build the app"
                 cmake --build build/              
                 echo "archiving"
-                //archiveArtifacts artifacts: 'bin/*'
+                
                 '''
             }
         }
