@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
-project(helloworld)
+project(KingGame)
 
 include_directories(
-  ${helloworld_SOURCE_DIR}/include
+  ${KingGame_SOURCE_DIR}/include
   )
  
   add_library( 
@@ -16,9 +16,9 @@ include_directories(
   )
   
    
-add_executable(helloworld
+add_executable(${KingGame}
 src/main.cpp)
-
+install(TARGETS "${KingGame}" DESTINATION bin)
 
 target_link_libraries(helloworld game)
 
