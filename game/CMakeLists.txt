@@ -18,7 +18,7 @@ include_directories(
    
 add_executable(${KingGame}
 src/main.cpp)
-install(TARGETS "${KingGame}" DESTINATION bin)
+install(TARGETS ${KingGame} DESTINATION bin)
 
 target_link_libraries(${KingGame} game)
 
