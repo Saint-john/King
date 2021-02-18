@@ -2,6 +2,7 @@
 
 #include <gtest/gtest.h>
 
+
 TEST(GameObjectTest, CreateObject)
 {
 	CoolGame::GameObject gameObject("Hello World");
