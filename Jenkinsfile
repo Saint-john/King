@@ -16,13 +16,13 @@ pipeline {
                 make build/
                 
                 echo "archiving"
-                archiveArtifacts artifacts: 'build/*'
+                archiveArtifacts artifacts: 'bin/*'
                 '''
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+               echo 'test....' 
             }
         }
         stage('Deploy') {
