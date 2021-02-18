@@ -20,7 +20,7 @@ add_executable(${KingGame}
 src/main.cpp)
 install(TARGETS "${KingGame}" DESTINATION bin)
 
-target_link_libraries(helloworld game)
+target_link_libraries(${KingGame} game)
 
 #add_executable(tests ${TEST_FILES})
 #target_link_libraries(tests game)
