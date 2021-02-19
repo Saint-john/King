@@ -17,7 +17,8 @@ pipeline {
             steps {
                 sh '''
                 echo "build the app"
-                cmake --build build/              
+                cd build/
+                make             
                 echo "archiving"
                 '''
             }
