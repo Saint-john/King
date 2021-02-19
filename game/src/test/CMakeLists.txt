@@ -7,7 +7,7 @@ include_directories(
   find_package(GTest REQUIRED)
   include_directories({GTEST_INCLUDE_DIRS})
  include_directories(
-  ${helloworld_SOURCE_DIR}/include
+  ../../include
   )
   set(TEST_FILES
   test_GameObject.cpp
