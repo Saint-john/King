@@ -30,7 +30,8 @@ pipeline {
                 cmake  CMakeLists.txt         
                 make  
                 ./executeTests
-                      
+                catchError(buildResult: 'ERROR', stageResult: 'UNSTABLE') {
+                    sh "exit 1"      
                 '''
             }
          }
