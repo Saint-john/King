@@ -31,7 +31,7 @@ pipeline {
                 make  
                 ./executeTests 
                 '''
-                catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
+                catchError(buildResult: 'FAILED', stageResult: 'UNSTABLE') {
                     sh "exit 1"
                 }
                         } 
