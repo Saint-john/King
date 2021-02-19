@@ -31,12 +31,13 @@ pipeline {
                 make  
                 ./executeTests 
                 '''
-            catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
+                catchError(buildResult: 'SUCCESS', stageResult: 'UNSTABLE') {
                     sh "exit 1"
                 }
-                } 
+                        } 
+             
                
-            }
+  
          }
     }
 }
