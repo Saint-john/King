@@ -28,7 +28,7 @@ pipeline {
                 echo "test the game"
                 ctest -T test              
                 '''
-                    junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
+                    xunit testResults: '**/target/*', allowEmptyResults: true
                 }
             }
         }
