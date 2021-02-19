@@ -19,8 +19,8 @@ pipeline {
                 echo "build the app"
                 cd build/
                 make             
-                echo "archiving"
-                archive *
+                
+                
                 '''
             }
            
