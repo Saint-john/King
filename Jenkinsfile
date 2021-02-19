@@ -28,8 +28,8 @@ pipeline {
                 echo "Creating a build folder"
                 mkdir -p test
                 echo "generate a build system"
-                cmake -S game/ -B test/         
-                
+                cmake -S game/src/test -B test/         
+                cmake --build test/  
                 
                 echo "test the game"
                 ctest -T test          
