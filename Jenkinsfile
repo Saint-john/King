@@ -20,19 +20,17 @@ pipeline {
                 echo "archiving"
                 '''
             }
-            post {
-                always {
-                    sh'''
+           
+        }
+         stage('Test')  {
+        steps {
+                sh'''
                 echo "cd into test dir"
                 cd game/src/test/
                 echo "test the game"
                 ctest -T test              
                 '''
-                    xunit testResults: '**/target/*', allowEmptyResults: true
-                }
             }
-        }
-        
-        
+         }
     }
 }
