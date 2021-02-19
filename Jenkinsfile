@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-     stage('Configure') {
+     stage('Pre-build') {
             steps {
                 sh '''
                 
