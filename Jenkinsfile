@@ -20,21 +20,19 @@ pipeline {
                 echo "archiving"
                 '''
             }
-        }
-        stage('Test') {
-            steps {
-                sh'''
+            post {
+                always {
+                    sh'''
                 echo "cd into test dir"
                 cd game/src/test/
                 echo "test the game"
                 ctest -T test              
                 '''
+                    junit testResults: '**/target/surefire-reports/*.xml', allowEmptyResults: false
+                }
             }
         }
-        stage('Deploy') {
-            steps {
-               echo 'Deploying....' 
-            }
-        }
+        
+        
     }
 }
