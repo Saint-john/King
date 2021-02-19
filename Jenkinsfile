@@ -27,7 +27,7 @@ pipeline {
                 echo "cd into test dir"
                 cd game/src/test/
                 echo "test the game"
-                ctest ../../../build/              
+                ctest -T test              
                 '''
             }
         }
