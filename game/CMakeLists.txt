@@ -25,7 +25,7 @@ target_link_libraries(${PROJECT_NAME} game)
  
   
 add_executable(executeTests ${TEST_FILES})
-target_link_libraries(executeTests ${GTEST_LIBRARIES} pthread)
+target_link_libraries(executeTests ${GTEST_LIBRARIES} )
 
 #add_executable(tests ${TEST_FILES})
 #target_link_libraries(tests game)
