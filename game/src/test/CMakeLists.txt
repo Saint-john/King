@@ -1,10 +1,9 @@
 cmake_minimum_required(VERSION 3.2)
   
   find_package(GTest REQUIRED)
-  include_directories({GTEST_INCLUDE_DIRS})
- include_directories(
-  ../../include
-  )
+  include_directories({GTEST_INCLUDE_DIRS}
+  ../../include)
+ 
   set(TEST_FILES
   test_GameObject.cpp
   )
