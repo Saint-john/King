@@ -24,10 +24,10 @@ pipeline {
         stage('Test') {
             steps {
                 sh'''
-                echo "Creating a test folder"
-                mkdir -p test
+                echo "cd into test dir"
+                cd game/src/test/
                 echo "test the game"
-                ctest build/              
+                ctest ../../../build/              
                 '''
             }
         }
