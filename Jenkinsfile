@@ -2,9 +2,10 @@ pipeline {
     agent any
     
     stages {
-     stage('Configure') {
+     /*stage('Configure') {
             steps {
                 sh '''
+                
                 echo "Creating a build folder"
                 mkdir -p build
                 echo "generate a build system"
@@ -21,18 +22,15 @@ pipeline {
                 '''
             }
            
-        }
+        }*/
          stage('Test')  {
         steps {
                 sh'''
-                echo "Creating a build folder"
-                mkdir -p test
-                echo "generate a build system"
-                cmake -S game/src/test -B test/         
-                cmake --build test/  
-                
-                echo "test the game"
-                ctest -T test          
+                cd game/src/test/
+                cmake  CMakeList.txt         
+                make  
+                ./executeTests
+                      
                 '''
             }
          }
