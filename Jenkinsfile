@@ -25,10 +25,14 @@ pipeline {
          stage('Test')  {
         steps {
                 sh'''
-                echo "cd into test dir"
-                cd game/src/test/
+                echo "Creating a build folder"
+                mkdir -p test
+                echo "generate a build system"
+                cmake -S game/ -B test/         
+                
+                
                 echo "test the game"
-                ctest -T test              
+                ctest -T test          
                 '''
             }
          }
