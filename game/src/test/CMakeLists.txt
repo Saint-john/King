@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-
+project(helloworld)
 include_directories(
   ${KingGame_SOURCE_DIR}/include
   )
