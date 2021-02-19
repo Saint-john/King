@@ -5,9 +5,9 @@ cmake_minimum_required(VERSION 3.2)
   ../../include)
  
  add_library( 
-  game
-  src/common/Game.cpp
-  src/common/GameObject.cpp)
+  test
+  ../Game.cpp
+  ../GameObject.cpp)
   
   set(TEST_FILES
   test_GameObject.cpp
