@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-     /*stage('Configure') {
+     stage('Configure') {
             steps {
                 sh '''
                 
@@ -22,7 +22,7 @@ pipeline {
                 '''
             }
            
-        }*/
+        }
          stage('Test')  {
         steps {
                 sh'''
