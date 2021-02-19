@@ -11,14 +11,7 @@ TEST(GameObjectTest, CreateObject)
 
 TEST(GameObjectTest, FailTest)
 {
-	ASSERT_EQ(false, true);
+	ASSERT_EQ(true, false);
 }
 
-int main(int argc, char** argv)
-{
-    std::cout << "Hello World" << std::endl;
-   
-
-    return 0;
-}
 
