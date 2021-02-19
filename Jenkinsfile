@@ -26,14 +26,13 @@ pipeline {
         }
          stage('Test')  {
         steps {
-                sh'''
+                catchError(buildResult: 'ERROR', stageResult: 'UNSTABLE') {
+                    sh'''
                 cd game/src/test/
                 cmake  CMakeLists.txt         
                 make  
                 ./executeTests 
                 '''
-                catchError(buildResult: 'ERROR', stageResult: 'UNSTABLE') {
-                    sh "exit 1"
                 }
                         } 
              
