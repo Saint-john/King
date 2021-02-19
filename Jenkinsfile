@@ -32,7 +32,7 @@ pipeline {
                 make  
                 ./executeTests 
                 '''
-                catchError(buildResult: '2', stageResult: 'UNSTABLE') {
+                catchError(buildResult: 'ERROR', stageResult: 'UNSTABLE') {
                     sh "exit 1"
                 }
                         } 
