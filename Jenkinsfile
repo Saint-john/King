@@ -27,7 +27,7 @@ pipeline {
         steps {
                 sh'''
                 cd game/src/test/
-                cmake  CMakeList.txt         
+                cmake  CMakeLists.txt         
                 make  
                 ./executeTests
                       
