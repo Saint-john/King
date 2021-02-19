@@ -1,8 +1,4 @@
 cmake_minimum_required(VERSION 3.2)
-project(helloworld)
-include_directories(
-  ${KingGame_SOURCE_DIR}/include
-  )
   
   find_package(GTest REQUIRED)
   include_directories({GTEST_INCLUDE_DIRS})
